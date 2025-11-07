@@ -5,7 +5,10 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <button class="px-4 py-2 font-bold rounded-lg cursor-pointer" @click="emit('click', $event)">
+  <button
+    class="lg:px-4 lg:py-2 px-1.5 py-3 whitespace-nowrap font-medium rounded-lg cursor-pointer"
+    @click="emit('click', $event)"
+  >
     <slot></slot>
   </button>
 </template>

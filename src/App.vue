@@ -33,7 +33,7 @@ function cycleExpenses() {
 </script>
 
 <template>
-  <main class="container mx-auto py-8 relative">
+  <main class="container mx-auto pt-16 md:pt-8 pb-8 relative px-4">
     <div class="absolute top-0 right-0 space-x-1">
       <BaseButton @click="cycleExpenses" class="font-mono text-gray-700 bg-gray-200">
         Cycle data
@@ -55,7 +55,7 @@ function cycleExpenses() {
 
     <hr class="mt-8 border-gray-200" />
 
-    <div class="mt-8 max-w-[900px]">
+    <div class="mt-8 max-w-[600px]">
       <ExpenseList />
     </div>
   </main>

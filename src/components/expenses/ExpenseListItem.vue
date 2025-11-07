@@ -31,7 +31,11 @@ const formattedAmount = useFormatter(amount)
     <div v-else>
       <div class="grid grid-cols-2 text-lg">
         <div clas="col-span-1">{{ expense.activity }}</div>
-        <div clas="col-span-1 text-right">{{ formattedAmount }}</div>
+        <div clas="col-span-1">
+          <div class="text-right">
+            {{ formattedAmount }}
+          </div>
+        </div>
       </div>
 
       <div class="text-sm">

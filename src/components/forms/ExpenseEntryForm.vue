@@ -23,7 +23,7 @@ function handleSubmit() {
 
 <template>
   <div>
-    <form @submit.prevent="handleSubmit" class="flex items-stretch gap-4">
+    <form @submit.prevent="handleSubmit" class="flex flex-col md:flex-row gap-4">
       <input
         class="border border-gray-300 py-2 px-4 rounded-md"
         v-model="activity"

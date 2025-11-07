@@ -32,30 +32,30 @@ function handleSubmit() {
   <form
     @submit.prevent="handleSubmit"
     @keydown.esc="emit('cancel')"
-    class="flex items-stretch gap-4"
+    class="flex flex-col md:flex-row gap-4"
   >
     <div class="grid grid-cols-2 gap-4">
-      <div>
+      <div class="col-span-2 md:col-span-1">
         <label class="block text-xs font-medium pl-2" :for="`edit-activity-${expense.id}`"
           >Activity</label
         >
         <input
           :id="`edit-activity-${expense.id}`"
           autofocus
-          class="border border-gray-300 py-2 px-4 rounded-md bg-white"
+          class="border border-gray-300 py-2 px-4 rounded-md bg-white w-full md:w-auto"
           v-model="activity"
           placeholder="Activity"
           type="text"
         />
       </div>
 
-      <div>
+      <div class="col-span-2 md:col-span-1">
         <label class="block text-xs font-medium pl-2" :for="`edit-amount-${expense.id}`"
           >Amount</label
         >
         <input
           :id="`edit-amount-${expense.id}`"
-          class="border border-gray-300 py-2 px-4 rounded-md bg-white"
+          class="border border-gray-300 py-2 px-4 rounded-md bg-white w-full md:w-auto"
           v-model="amount"
           placeholder="Spending"
           pattern="^\d*(\.\d{0,2})?$"
