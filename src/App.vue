@@ -30,10 +30,29 @@ function cycleExpenses() {
   const data = [...remainder, first].filter((exp) => exp) as Expense[]
   expenses.value = data
 }
+
+const devToolsOpen = ref(false)
+
+function detectDevTools() {
+  const start = new Date().getTime()
+  debugger
+  const end = new Date().getTime()
+
+  if (end - start > 10) {
+    devToolsOpen.value = true
+    console.clear()
+    console.log('PLEASE DO NOT USE INSPECT ELEMENT')
+  }
+}
+
+console.clear()
+console.log('PLEASE DO NOT USE INSPECT ELEMENT')
+// Call this function periodically
+setInterval(detectDevTools, 1000)
 </script>
 
 <template>
-  <main class="container mx-auto pt-16 md:pt-8 pb-8 relative px-4">
+  <main v-if="!devToolsOpen" class="container mx-auto pt-16 md:pt-8 pb-8 relative px-4">
     <div class="absolute top-0 right-0 space-x-1">
       <BaseButton @click="cycleExpenses" class="font-mono text-gray-700 bg-gray-200">
         Cycle data
@@ -59,6 +78,8 @@ function cycleExpenses() {
       <ExpenseList />
     </div>
   </main>
+
+  <main v-else class="text-xl p-4 text-red-600">PLEASE DO NOT USE INSPECT ELEMENT</main>
 </template>
 
 <style scoped></style>
