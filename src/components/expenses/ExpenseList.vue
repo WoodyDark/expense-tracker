@@ -42,13 +42,19 @@ const formattedAmount = useFormatter(totalSpending)
 
     <div class="mt-4">
       <ol v-if="searchedExpenses.length > 0" class="grid">
-        <ExpenseListItem
-          v-for="(expense, index) in searchedExpenses"
-          :key="expense.id"
-          :expense="expense"
-          class="p-4 rounded-md"
-          :class="index % 2 === 0 ? 'bg-gray-100' : ''"
-        />
+        <TransitionGroup
+          enter-active-class="transition duration-300 origin-left"
+          enter-from-class="scale-x-0"
+          move-class="transition duration-500"
+        >
+          <ExpenseListItem
+            v-for="(expense, index) in searchedExpenses"
+            :key="expense.id"
+            :expense="expense"
+            class="p-4 rounded-md"
+            :class="index % 2 === 0 ? 'bg-gray-100' : ''"
+          />
+        </TransitionGroup>
       </ol>
 
       <p v-else class="text-gray-500 text-center py-8 bg-gray-50 rounded-md">No expenses</p>

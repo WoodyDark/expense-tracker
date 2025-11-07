@@ -48,7 +48,7 @@ const id = computed({
 })
 
 function insertExpense(expense: RawExpense) {
-  expenses.value = [...expenses.value, createExpense(expense)]
+  expenses.value = [createExpense(expense), ...expenses.value]
 }
 
 function editExpense(editedExpense: Expense) {
@@ -74,7 +74,7 @@ export function useExpenses() {
 
 
   return {
-    expenses: readonly(expenses),
+    expenses: expenses,
     insertExpense,
     deleteExpense,
     editExpense,
