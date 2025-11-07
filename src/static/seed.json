@@ -1,0 +1,22 @@
+[
+  { "activity": "Breakfast - coffee & toast", "amount": 8.5 },
+  { "activity": "Travel: Taxi ride to office", "amount": 12 },
+  { "activity": "Vegetables and eggs", "amount": 24.7 },
+  { "activity": "Netflix subscription", "amount": 25 },
+  { "activity": "Lunch - rice and chicken", "amount": 10.5 },
+  { "activity": "Bubble tea", "amount": 9.9 },
+  { "activity": "Parking fee", "amount": 4 },
+  { "activity": "Electricity bill", "amount": 130 },
+  { "activity": "Medicine", "amount": 6.8 },
+  { "activity": "Dinner - sandwich", "amount": 9 },
+  { "activity": "Shampoo", "amount": 15.5 },
+  { "activity": "Milk and bread", "amount": 12.4 },
+  { "activity": "Travel: Petrol refill", "amount": 90 },
+  { "activity": "Lunch - egg and noodles", "amount": 8 },
+  { "activity": "Cinema ticket", "amount": 18 },
+  { "activity": "Birthday card & wrapping paper", "amount": 7.2 },
+  { "activity": "Dinner - sushi set", "amount": 35 },
+  { "activity": "Laundry detergent", "amount": 17.9 },
+  { "activity": "Travel: Train fare", "amount": 3.5 },
+  { "activity": "Gym day pass", "amount": 25 }
+]
