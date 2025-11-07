@@ -1,4 +1,4 @@
-import { computed, readonly, ref } from "vue";
+import { computed, ref } from "vue";
 
 const storageKey = 'expenses'
 const idKey = 'id'
